@@ -24,6 +24,7 @@ args = TrainingArguments(
     learning_rate=5e-5,
     weight_decay=0.001,
     warmup_steps=100,
+    max_grad_norm=5,
     fp16=True,
     prediction_loss_only=True,
     dataloader_num_workers=optimal_workers(),
