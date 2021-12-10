@@ -1,5 +1,6 @@
 from transformers import TrainingArguments, AutoTokenizer
 import torch
+
 from utils import optimal_workers
 
 DATA_FILE = 'data.csv'
@@ -7,7 +8,7 @@ TEST_SIZE = 0.05
 TEXT_MODEL = 'm3hrdadfi/roberta-zwnj-wnli-mean-tokens'
 TOKENIZER = AutoTokenizer.from_pretrained(TEXT_MODEL)
 IMAGE_MODEL = 'openai/clip-vit-base-patch32'
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 IMAGE_SIZE = 224
 MAX_LEN = 120
 MEAN = torch.tensor([0.48145466, 0.4578275, 0.40821073])
@@ -27,8 +28,8 @@ args = TrainingArguments(
     prediction_loss_only=True,
     dataloader_num_workers=optimal_workers(),
     gradient_accumulation_steps=1,
-    per_device_train_batch_size=16,
-    per_device_eval_batch_size=16,
+    per_device_train_batch_size=BATCH_SIZE,
+    per_device_eval_batch_size=BATCH_SIZE,
     num_train_epochs=1,
     report_to='tensorboard'
 )
