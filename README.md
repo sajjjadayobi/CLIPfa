@@ -1,4 +1,4 @@
-# CLIP
+# CLIPfa: Connecting Farsi Text and Images
 
 ## Demo
 - Colab notebooks
