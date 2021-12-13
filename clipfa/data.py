@@ -4,9 +4,6 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 from PIL import Image
 
-from config import *
-from utils import show_data
-
 
 class CLIPDataset(Dataset):
     def __init__(self, df, mode='train'):
@@ -15,9 +12,6 @@ class CLIPDataset(Dataset):
             self.augment = transforms.Compose([
                 transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
                 transforms.RandomHorizontalFlip(p=0.5),
-                transforms.RandomRotation(degrees=(-20, 20)),
-                transforms.ColorJitter(hue=.05, saturation=.05,
-                                       brightness=.05, contrast=.05),
                 transforms.ToTensor(),
                 transforms.Normalize(mean=MEAN, std=STD)
             ])
@@ -33,6 +27,7 @@ class CLIPDataset(Dataset):
         image = self.augment(Image.open(item['image']))
         text = TOKENIZER(item['caption'], padding='max_length',
                          max_length=MAX_LEN, truncation=True, return_tensors='pt')
+        
         return {'input_ids': text['input_ids'][0], 'attention_mask': text['attention_mask'][0], 'pixel_values': image}
 
     def __len__(self):
@@ -41,7 +36,7 @@ class CLIPDataset(Dataset):
 
 if __name__ == '__main__':
     df = pd.read_csv(DATA_FILE)
-    train_df, test_df = train_test_split(df, test_size=TEST_SIZE)
+    train_df, test_df = train_test_split(df, test_size=TEST_SIZE, random_state=0)
     train_ds = CLIPDataset(train_df, mode='train')
     test_ds = CLIPDataset(test_df, mode='test')
 
@@ -50,5 +45,5 @@ if __name__ == '__main__':
         print(item['input_ids'].shape)
         print(item['pixel_values'].shape)
         break
-
+        
     show_data(item)
