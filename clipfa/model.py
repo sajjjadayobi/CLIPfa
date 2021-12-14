@@ -1,16 +1,17 @@
-
-from torch import nn
-from transformers import AutoModel, CLIPModel
+from transformers import AutoModel, CLIPVisionModel
 
 from config import TEXT_MODEL, IMAGE_MODEL
+from utils import clip_wraper_creator
 from data import item
 
 
-clip = CLIPModel.from_pretrained(IMAGE_MODEL)
-clip.text_model = AutoModel.from_pretrained(TEXT_MODEL).base_model
-# convert text_projection to be compatible with new text encoder
-clip.text_projection = nn.Linear(clip.text_model.config.hidden_size,
-                                 clip.projection_dim, bias=False)
+vision_encoder = CLIPVisionModel.from_pretrained(IMAGE_MODEL)
+text_encoder = AutoModel.from_pretrained(TEXT_MODEL)
+assert text_encoder.config.hidden_size == vision_encoder.config.hidden_size
+
+clip = clip_wraper_creator()
+clip.text_model = text_encoder
+clip.vision_model = vision_encoder
 
 
 if __name__ == '__main__':
