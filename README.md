@@ -1,5 +1,15 @@
 # CLIPfa: Connecting Farsi Text and Images
 
+
+## Progress
+- training code ✅
+- hypersearch ✅
+- move on Server
+- Downloada WiT images
+- crwal divar
+- train model
+- create demo
+
 ## Demo
 - Colab notebooks
 - Huggingface 🤗 spaces
