@@ -4,10 +4,12 @@
 ## Progress
 - training code ✅
 - hypersearch ✅
-- move on Server
+- Flicker30K ✅
+- Translate COCO
+- Move Code on Server
 - Downloada WiT images
-- crwal divar
-- train model
+- Crwal divar
+- Train model
 - create demo
 
 ## Demo
@@ -26,7 +28,12 @@ image_embeddings = get_image_embeddings(vision_encoder, test_dl, device='cuda')
 text_embedding = get_text_embedding(text_encoder, query='موز', device='cuda')
 ```
 
+## Datasets
+- Translated Flicker30K, MS-COCO, Conceptual Captions and Divar
+- [CC](https://ai.google.com/research/ConceptualCaptions/download)
+- [image2ds](https://github.com/rom1504/img2dataset)
+
 ## Applications
-- image search using image
 - image search using description
 - zero shot image classification
+- Anology
