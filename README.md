@@ -33,7 +33,6 @@ text_embedding = get_text_embedding(text_encoder, query='موز', device='cuda')
 - MS-COCO (50K!)
 - WiT (125K!)
 - Divar (100K!)
-- [CC](https://ai.google.com/research/ConceptualCaptions/download)
 - [image2ds](https://github.com/rom1504/img2dataset)
 
 ## Applications
