@@ -29,7 +29,10 @@ text_embedding = get_text_embedding(text_encoder, query='موز', device='cuda')
 ```
 
 ## Datasets: 300K
-- Translated Flicker30K, MS-COCO, Conceptual Captions and Divar
+- Flicker30K (25K)
+- MS-COCO (50K!)
+- WiT (125K!)
+- Divar (300K!)
 - [CC](https://ai.google.com/research/ConceptualCaptions/download)
 - [image2ds](https://github.com/rom1504/img2dataset)
 
