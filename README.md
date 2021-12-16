@@ -12,17 +12,43 @@
 - Train model
 - convert to package
 
-## Demo
+## How to use?
+You can use these models of the shelf. 
+```python
+from transformers import CLIPVisionModel, RobertaModel, AutoTokenizer
+vision_encoder = CLIPVisionModel.from_pretrained('SajjadAyoubi/clip-fa-vision')
+text_encoder = RobertaModel.from_pretrained('SajjadAyoubi/clip-fa-text')
+tokenizer = AutoTokenizer.from_pretrained('SajjadAyoubi/clip-fa-text')
+```
+
+### Demo:
+The followings are just some use cases of CLIP model.
+```python
+# The following is just a demo and you don't have to use it
+from clipfa import CLIPDemo
+demo = CLIPDemo(vision_encoder, text_encoder, tokenizer)
+```
+#### Image Search:
+```python
+image_paths = []
+demo.image_search(query='اسب', image_paths=image_paths)
+```
+#### Zero Shot Image Classification:
+```python
+class_list = ['چند مرد','موز' ,'بیل']
+demo.zero_shot(image_path='workers.jpg', class_list=class_list)
+```
+### Analogy: 
+```python
+image_paths = []
+demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
+```
+
+
+
 - Colab notebooks
 - Huggingface 🤗 spaces
 
-```python
-from transformers import CLIPVisionModel, RobertaModel
-from clipfa.utils import get_image_embeddings, get_text_embedding, most_similar
-
-vision_encoder = CLIPVisionModel.from_pretrained('SajjadAyoubi/clip-fa-vision')
-text_encoder = RobertaModel.from_pretrained('SajjadAyoubi/clip-fa-text')
-```
 
 ## Datasets: 300K
 - Flicker30K (25K)
