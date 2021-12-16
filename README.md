@@ -1,5 +1,6 @@
 # CLIPfa: Connecting Farsi Text and Images
 CLIP (Contrastive Language-Image Pre-Training) is the first multimodal (in this case, vision and text) model tackling computer vision and was recently released by OpenAI on January 5, 2021. We've trained a Tiny Farsi(Persian) version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa and Original CLIP's ViT as our starting point.Both models create vectors with 768d and same as paper we used contrastive loss. 
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
 - Keep it in mind that, this model was trained for 5 epochs only on 300K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
 
 ## How to use?
@@ -43,6 +44,23 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 - WiT (125K!)
 - Divar (100K!)
 - [image2ds](https://github.com/rom1504/img2dataset)
+
+
+## Contact us: 🤝
+If you have a technical question regarding the model, pretraining, code or publication, please create an issue in the repository.
+
+## Citation: ↩️
+we didn't publish any papers on the work. However, if you did, please cite us properly with an entry like one below.
+```bibtex
+@misc{ParsBigBird,
+  author          = {Ayoubi, Sajjad},
+  title           = {CLIPfa: Connecting Farsi Text and Images},
+  year            = 2022,
+  publisher       = {GitHub},
+  journal         = {GitHub repository},
+  howpublished    = {\url{https://github.com/SajjjadAyobi/CLIPfa}},
+}
+```
 
 
 ## Progress
