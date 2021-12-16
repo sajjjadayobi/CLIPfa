@@ -13,7 +13,7 @@
 - convert to package
 
 ## How to use?
-You can use these models of the shelf. 
+You can use these models of the shelf. Both models create vectors with 768 dimention.
 ```python
 from transformers import CLIPVisionModel, RobertaModel, AutoTokenizer
 vision_encoder = CLIPVisionModel.from_pretrained('SajjadAyoubi/clip-fa-vision')
@@ -21,19 +21,19 @@ text_encoder = RobertaModel.from_pretrained('SajjadAyoubi/clip-fa-text')
 tokenizer = AutoTokenizer.from_pretrained('SajjadAyoubi/clip-fa-text')
 ```
 
-### Demo:
+## Demo:
 The followings are just some use cases of CLIP model.
+- use `pip install -q git+https://github.com/sajjjadayobi/clipfa.git`
 ```python
-# The following is just a demo and you don't have to use it
 from clipfa import CLIPDemo
 demo = CLIPDemo(vision_encoder, text_encoder, tokenizer)
 ```
-#### Image Search:
+### Image Search:
 ```python
 image_paths = []
 demo.image_search(query='اسب', image_paths=image_paths)
 ```
-#### Zero Shot Image Classification:
+### Zero Shot Image Classification:
 ```python
 class_list = ['چند مرد','موز' ,'بیل']
 demo.zero_shot(image_path='workers.jpg', class_list=class_list)
@@ -43,8 +43,6 @@ demo.zero_shot(image_path='workers.jpg', class_list=class_list)
 image_paths = []
 demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 ```
-
-
 
 - Colab notebooks
 - Huggingface 🤗 spaces
