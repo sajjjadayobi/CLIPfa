@@ -47,7 +47,7 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 
 
 ## Contact us: 🤝
-If you have a technical question regarding the model, pretraining, code or publication, please create an issue in the repository.
+If you have a technical question regarding the model, code or publication, create an issue in the repository.
 
 ## Citation: ↩️
 we didn't publish any papers on the work. However, if you did, please cite us properly with an entry like one below.
