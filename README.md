@@ -63,8 +63,8 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 - [image2ds](https://github.com/rom1504/img2dataset)
 
 
-## Training: On Kaggle nootebook 😧
-Any dataset can be used with little change by the [`training`]() code. CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [this] notebook I used training code to train a small CLIP on flicker30k dataset.
+## Training: <a href="https://huggingface.co/spaces/SajjadAyoubi/Image-Search-Fa"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
+Any dataset can be used with little change by the [`training code`](). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [this]() notebook I used [`training code`]() to train a small CLIP on translated flicker30k dataset.
 
 
 ## Citation: ↩️
