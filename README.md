@@ -14,7 +14,7 @@ You can use these models of the shelf. Both models create vectors with 768 dimen
 from transformers import CLIPVisionModel, RobertaModel, AutoTokenizer, CLIPFeatureExtractor
 # download pre-trained models
 vision_encoder = CLIPVisionModel.from_pretrained('SajjadAyoubi/clip-fa-vision')
-vision_preprocessor = CLIPFeatureExtractor.from_pretrained('SajjadAyoubi/clip-fa-vision')
+preprocessor = CLIPFeatureExtractor.from_pretrained('SajjadAyoubi/clip-fa-vision')
 text_encoder = RobertaModel.from_pretrained('SajjadAyoubi/clip-fa-text')
 tokenizer = AutoTokenizer.from_pretrained('SajjadAyoubi/clip-fa-text')
 # define input image and input text
@@ -22,7 +22,7 @@ text = 'whatever you want'
 image = PIL.Image.open(image_path)
 # compute embeddings
 text_embedding = text_encoder(**tokenizer(text, return_tensors='pt')).pooler_output
-image_embedding = vision_encoder(**vision_preprocessor(image, return_tensors='pt')).pooler_output
+image_embedding = vision_encoder(**preprocessor(image, return_tensors='pt')).pooler_output
 text_embedding.shape == image_embedding.shape
 ```
 
