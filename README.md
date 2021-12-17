@@ -1,12 +1,15 @@
 <span align="center">
-    <a href="https://huggingface.co/SajjadAyoubi/"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=SajjadAyoubi&color=yellow"></a>
+    <a href="https://huggingface.co/spaces/SajjadAyoubi/Image-Search-Fa"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Image Search Demo&color=blue"></a>
+</span>
+<span align="center">
+    <a href="https://huggingface.co/SajjadAyoubi/"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Models&color=red"></a>
     <a href="https://colab.research.google.com/github/sajjjadayobi/PersianQA/blob/main/notebooks/Demo.ipynb"><img src="https://img.shields.io/static/v1?label=Colab&message=Demo&logo=Google%20Colab&color=f9ab00"></a>
 </span>
 
 # CLIPfa: Connecting Farsi Text and Images
-OpenAI recently released the paper Learning Transferable Visual Models From Natural Language Supervision in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. We've trained a Tiny Farsi(Persian) version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa and Original CLIP's ViT as our starting point.
-![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
-- Keep it in mind that, this model was trained for 5 epochs only on 300K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
+OpenAI recently released [the paper Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. In this work we've trained a **Tiny Farsi(Persian)** version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa for text encoder and Original CLIP's ViT as vision encoder.
+![CLIPfa image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
+Keep it in mind that, this model was trained for 5 epochs only on 300K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
 
 ## How to use?
 You can use these models of the shelf. Both models create vectors with 768 dimention.
@@ -63,10 +66,8 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 ## Training: On Kaggle nootebook 😧
 the [`training`]() code works on any given dataset with little change. You can train CLIP with others encoders they just need to have the same hidden size at the last layer. In [this] notebook I used training code to train a small CLIP on flicker30k dataset.
 
-## Contact us: :open_hands:
-If you have a technical question regarding the model, code or publication, create an issue in the repository.
-
 ## Citation: ↩️
+If you have a technical question regarding the model, code or publication, create an issue in the repository.
 we didn't publish any papers on the work. However, if you did, please cite us properly with an entry like one below.
 ```bibtex
 @misc{ParsBigBird,
