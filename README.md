@@ -79,8 +79,8 @@ we didn't publish any papers on the work. However, if you did, please cite us pr
 - training code ✅
 - hypersearch ✅
 - Flicker30K ✅
-- Translate COCO
-- Move Code on Server
+- Translate COCO ✅
 - Downloada WiT images
+- Move Code on Server
 - Crwal divar
 - Train model
