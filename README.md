@@ -4,21 +4,26 @@
 </span>
 
 # CLIPfa: Connecting Farsi Text and Images
-CLIP (Contrastive Language-Image Pre-Training) is the first multimodal (in this case, vision and text) model tackling computer vision and was recently released by OpenAI on January 5, 2021. We've trained a Tiny Farsi(Persian) version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa and Original CLIP's ViT as our starting point.Both models create vectors with 768d and same as paper we used contrastive loss. 
+OpenAI recently released the paper Learning Transferable Visual Models From Natural Language Supervision in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. We've trained a Tiny Farsi(Persian) version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa and Original CLIP's ViT as our starting point. Both models create vectors with 768d. 
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
 - Keep it in mind that, this model was trained for 5 epochs only on 300K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
-
-
-OpenAI recently released the paper Learning Transferable Visual Models From Natural Language Supervision in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a visual encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions.
 
 ## How to use?
 You can use these models of the shelf. Both models create vectors with 768 dimention.
 ```python
-from transformers import CLIPVisionModel, RobertaModel, AutoTokenizer
+from transformers import CLIPVisionModel, RobertaModel, AutoTokenizer, CLIPFeatureExtractor
+# download pre-trained models
 vision_encoder = CLIPVisionModel.from_pretrained('SajjadAyoubi/clip-fa-vision')
-vision_preprocessor = 
+vision_preprocessor = CLIPFeatureExtractor.from_pretrained('SajjadAyoubi/clip-fa-vision')
 text_encoder = RobertaModel.from_pretrained('SajjadAyoubi/clip-fa-text')
 tokenizer = AutoTokenizer.from_pretrained('SajjadAyoubi/clip-fa-text')
+# define input image and input text
+text = 'whatever you want'
+image = PIL.Image.open(image_path)
+# compute embeddings
+text_embedding = text_encoder(**tokenizer(text, return_tensors='pt')).pooler_output
+image_embedding = vision_encoder(**vision_preprocessor(image, return_tensors='pt')).pooler_output
+text_embedding.shape == image_embedding.shape
 ```
 
 ## Demo: Huggingface 🤗 spaces
