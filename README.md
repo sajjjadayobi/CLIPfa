@@ -64,7 +64,8 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 
 
 ## Training: On Kaggle nootebook 😧
-the [`training`]() code works on any given dataset with little change. You can train CLIP with others encoders they just need to have the same hidden size at the last layer. In [this] notebook I used training code to train a small CLIP on flicker30k dataset.
+Any dataset can be used with little change by the [`training`]() code. CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [this] notebook I used training code to train a small CLIP on flicker30k dataset.
+
 
 ## Citation: ↩️
 If you have a technical question regarding the model, code or publication, create an issue in the repository.
