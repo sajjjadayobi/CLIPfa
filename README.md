@@ -26,7 +26,7 @@ image_embedding = vision_encoder(**preprocessor(image, return_tensors='pt')).poo
 text_embedding.shape == image_embedding.shape
 ```
 
-## Demo: Huggingface 🤗 spaces
+## Demo:
 The followings are just some use cases of CLIP model.
 - use `pip install -q git+https://github.com/sajjjadayobi/clipfa.git`
 ```python
@@ -49,7 +49,9 @@ image_paths = []
 demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 ```
 
-## Datasets: 300K
+### Online Demo: Huggingface 🤗 spaces
+
+## Dataset: 300K
 - Flicker30K (25K)
 - MS-COCO (100K!)
 - WiT (125K!)
@@ -77,12 +79,3 @@ we didn't publish any papers on the work. However, if you did, please cite us pr
 }
 ```
 > Made with ❤️ in my basement🤫
-
-## Progress
-- training code ✅
-- hypersearch ✅
-- Flicker30K ✅
-- Translate COCO ✅
-- Downloada WiT images
-- Crwal divar
-- Train model
