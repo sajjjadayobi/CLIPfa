@@ -54,7 +54,6 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 - MS-COCO (100K!)
 - WiT (125K!)
 - Unsplash (20!)
-- VizWiz (20!)
 - Divar (100K!)
 - [image2ds](https://github.com/rom1504/img2dataset)
 
