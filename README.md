@@ -73,7 +73,7 @@ we didn't publish any papers on the work. However, if you did, please cite us pr
   howpublished    = {\url{https://github.com/SajjjadAyobi/CLIPfa}},
 }
 ```
-
+> Made with ❤️ in my basement🤫
 
 ## Progress
 - training code ✅
