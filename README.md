@@ -58,6 +58,9 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 - [image2ds](https://github.com/rom1504/img2dataset)
 
 
+## Training: On Kaggle nootebook 😧
+the [`training`]() code works on any given dataset with little change. You can train CLIP with others encoders they just need to have the same hidden size at the last layer. In [this] notebook I used training code to train a small CLIP on flicker30k dataset.
+
 ## Contact us: :open_hands:
 If you have a technical question regarding the model, code or publication, create an issue in the repository.
 
