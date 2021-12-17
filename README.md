@@ -4,7 +4,7 @@
 </span>
 
 # CLIPfa: Connecting Farsi Text and Images
-OpenAI recently released the paper Learning Transferable Visual Models From Natural Language Supervision in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. We've trained a Tiny Farsi(Persian) version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa and Original CLIP's ViT as our starting point. Both models create vectors with 768d. 
+OpenAI recently released the paper Learning Transferable Visual Models From Natural Language Supervision in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. We've trained a Tiny Farsi(Persian) version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa and Original CLIP's ViT as our starting point.
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
 - Keep it in mind that, this model was trained for 5 epochs only on 300K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
 
