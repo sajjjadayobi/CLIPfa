@@ -51,7 +51,7 @@ demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 
 ## Datasets: 300K
 - Flicker30K (25K)
-- MS-COCO (50K!)
+- MS-COCO (100K!)
 - WiT (125K!)
 - Unsplash (20!)
 - VizWiz (20!)
