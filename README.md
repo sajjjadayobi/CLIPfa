@@ -40,9 +40,14 @@ search.compute_image_embeddings(train_df.image.to_list())
 ```
 ### Image Search:
 ```python
-demo.image_search(query='غروب خورشید', image_paths=image_paths)
+demo.image_search(query='غروب خورشید')
 ```
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/image_search.png)
+
+```python
+demo.image_search(query='موج سواری')
+```
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/wave.png)
 
 ### Zero Shot Image Classification:
 ```python
