@@ -35,22 +35,21 @@ The followings are just some use cases of CLIP model.
 ```python
 from clipfa import CLIPDemo
 demo = CLIPDemo(vision_encoder, text_encoder, tokenizer)
+search.compute_text_embeddings(['ماشین','خونه' ,'مرد'])
+search.compute_image_embeddings(train_df.image.to_list())
 ```
 ### Image Search:
 ```python
-image_paths = []
 demo.image_search(query='غروب خورشید', image_paths=image_paths)
 ```
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/image_search.png)
 
 ### Zero Shot Image Classification:
 ```python
-class_list = ['چند مرد','موز' ,'بیل']
-demo.zero_shot(image_path='workers.jpg', class_list=class_list)
+demo.zero_shot(image_path='workers.jpg')
 ```
 ### Analogy: 
 ```python
-image_paths = []
 demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
 ```
 
