@@ -33,7 +33,7 @@ class CLIPDataset(Dataset):
     def __getitem__(self, idx):
         token = self.tokens[idx]
         return {'input_ids': token.ids, 'attention_mask': token.attention_mask,
-                'pixel_values': self.augment(Image.open(self.image_paths[idx]))}
+                'pixel_values': self.augment(Image.open(self.image_paths[idx]).convert('RGB'))}
 
     def __len__(self):
         return len(self.image_paths)
