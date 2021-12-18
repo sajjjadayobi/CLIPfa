@@ -39,8 +39,10 @@ demo = CLIPDemo(vision_encoder, text_encoder, tokenizer)
 ### Image Search:
 ```python
 image_paths = []
-demo.image_search(query='اسب', image_paths=image_paths)
+demo.image_search(query='غروب خورشید', image_paths=image_paths)
 ```
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/image_search.png)
+
 ### Zero Shot Image Classification:
 ```python
 class_list = ['چند مرد','موز' ,'بیل']
