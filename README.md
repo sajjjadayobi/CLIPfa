@@ -56,7 +56,7 @@ demo.anology('sunset.jpg', additional_text='دریا')
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy-sea.png)
 
 ```python
-demo.anology('sunset.jpg', additional_text='دریا')
+demo.anology('sunset.jpg', additional_text='برف')
 ```
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy-snow.png)
 
@@ -75,7 +75,7 @@ demo.zero_shot(image_path='apples.jpg')
 ### Online Demo: Huggingface 🤗 spaces
 
 ## Dataset: 300K
-250K from filtered (Flicker30K, MS-COCO, WiT, Unsplash)
+250K from filtered (Flicker30K, MS-COCO, WiT)
 - Note: We used [image2ds](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as WiT. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
 
 
