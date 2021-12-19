@@ -53,12 +53,12 @@ demo.image_search(query='موج سواری')
 ```python
 demo.anology('sunset.jpg', additional_text='دریا')
 ```
-![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy_sea.png)
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy-sea.png)
 
 ```python
 demo.anology('sunset.jpg', additional_text='برف')
 ```
-![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy_snow.png)
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy-snow.png)
 
 
 
