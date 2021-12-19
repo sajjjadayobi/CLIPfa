@@ -30,7 +30,7 @@ text_embedding.shape == image_embedding.shape
 ```
 
 ## Demo:
-The followings are just some use cases of CLIP model.
+The followings are just some use cases of CLIPfa on 25K [unsplash images](https://github.com/unsplash/datasets)
 - use `pip install -q git+https://github.com/sajjjadayobi/clipfa.git`
 ```python
 from clipfa import CLIPDemo
@@ -60,7 +60,7 @@ demo.zero_shot(image_path='apples.jpg')
 
 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 |
 | :-------------------------: | :-------------------------: | :-------------------------: |
-|         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/banana.png)          |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cherry.png)          |        ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/apple.png)           |
+|         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/banana.jpg)          |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cherry.jpg)          |        ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/apple.jpg)           |
 
 
 ### Analogy: 
