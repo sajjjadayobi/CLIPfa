@@ -57,9 +57,11 @@ demo.zero_shot(image_path='workers.jpg')
 
 
 
-| سگ: 36, گربه: 21, آدم: 13, ماشین: 11 | سگ: 36, گربه: 21, آدم: 13, ماشین: 11 | سگ: 36, گربه: 21, آدم: 13, ماشین: 11 |
-| :----------------------------------: | :----------------------------------: | :----------------------------------: |
-|              ![image]()              |              ![image]()              |            ![image]()                |
+
+| موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 |
+| :-------------------------: | :-------------------------: | :-------------------------: |
+|         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/banana.jpg)          |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cherry.jpg)          |        ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/apples.jpg)           |
+
 
 ### Analogy: 
 ```python
