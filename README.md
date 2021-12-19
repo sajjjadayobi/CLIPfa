@@ -68,9 +68,9 @@ demo.zero_shot(image_path='apples.jpg')
 ```
 - Provided labels with their probability for each image.
 
-| موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 |
-| :-------------------------: | :-------------------------: | :-------------------------: |
-|         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/banana.jpg)          |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cherry.jpg)          |        ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/apple.jpg)           |
+|                   گاو:36 , ماهی:22, اسب:42                   |                   گاو:41 , ماهی:23, اسب:36                   |                 گاو:26 , ماهی:**45**, اسب:27                 |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/horse.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cow.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/fish.jpg) |
 
 ### Online Demo: Huggingface 🤗 spaces
 
