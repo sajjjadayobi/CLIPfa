@@ -35,8 +35,8 @@ The followings are just some use cases of CLIPfa on 25K [unsplash images](https:
 ```python
 from clipfa import CLIPDemo
 demo = CLIPDemo(vision_encoder, text_encoder, tokenizer)
-search.compute_text_embeddings(['سیب','موز' ,'آلبالو'])
-search.compute_image_embeddings(test_df.image_path.to_list())
+demo.compute_text_embeddings(['سیب','موز' ,'آلبالو'])
+demo.compute_image_embeddings(test_df.image_path.to_list())
 ```
 ### Image Search:
 ```python
