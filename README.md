@@ -35,7 +35,7 @@ The followings are just some use cases of CLIP model.
 ```python
 from clipfa import CLIPDemo
 demo = CLIPDemo(vision_encoder, text_encoder, tokenizer)
-search.compute_text_embeddings(['ماشین','خونه' ,'مرد'])
+search.compute_text_embeddings(['سیب','موز' ,'آلبالو'])
 search.compute_image_embeddings(train_df.image.to_list())
 ```
 ### Image Search:
@@ -51,7 +51,7 @@ demo.image_search(query='موج سواری')
 
 ### Zero Shot Image Classification:
 ```python
-demo.zero_shot(image_path='workers.jpg')
+demo.zero_shot(image_path='apples.jpg')
 ```
 - Provided labels with their probability for each image.
 
