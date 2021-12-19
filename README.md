@@ -60,7 +60,7 @@ demo.zero_shot(image_path='apples.jpg')
 
 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 |
 | :-------------------------: | :-------------------------: | :-------------------------: |
-|         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/banana.jpg)          |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cherry.jpg)          |        ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/apples.jpg)           |
+|         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/banana.png)          |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cherry.png)          |        ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/apple.png)           |
 
 
 ### Analogy: 
