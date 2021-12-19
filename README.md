@@ -66,8 +66,8 @@ Flicker30K (25K), MS-COCO (100K!), WiT (125K!), Unsplash (20!), Divar (100K!)
 - Note: We used [image2ds](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as WiT. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
 
 
-## Training: <a href="https://huggingface.co/spaces/SajjadAyoubi/Image-Search-Fa"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
-Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [this]() notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated flicker30k dataset.
+## Training: <a href="https://colab.research.google.com/github/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
+Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [this](https://github.com/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb) notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated flicker30k dataset.
 
 
 ## Citation: ↩️
