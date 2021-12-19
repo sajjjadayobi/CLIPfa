@@ -49,24 +49,28 @@ demo.image_search(query='موج سواری')
 ```
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/wave.png)
 
+### Analogy: 
+```python
+demo.anology('sunset.jpg', additional_text='دریا')
+```
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy%2Bsea.png)
+
+```python
+demo.anology('sunset.jpg', additional_text='دریا')
+```
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy%2Bsnow.png)
+
+
+
 ### Zero Shot Image Classification:
 ```python
 demo.zero_shot(image_path='apples.jpg')
 ```
 - Provided labels with their probability for each image.
 
-
-
-
 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 | موز: 32, سیب:‌21, آلبالو: 19 |
 | :-------------------------: | :-------------------------: | :-------------------------: |
 |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/banana.jpg)          |         ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cherry.jpg)          |        ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/apple.jpg)           |
-
-
-### Analogy: 
-```python
-demo.anology('sunset.jpg', additional_text='دریا')
-```
 
 ### Online Demo: Huggingface 🤗 spaces
 
