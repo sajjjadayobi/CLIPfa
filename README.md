@@ -53,6 +53,14 @@ demo.image_search(query='موج سواری')
 ```python
 demo.zero_shot(image_path='workers.jpg')
 ```
+- Provided labels with their probability for each image.
+
+
+
+| سگ: 36, گربه: 21, آدم: 13, ماشین: 11 | سگ: 36, گربه: 21, آدم: 13, ماشین: 11 | سگ: 36, گربه: 21, آدم: 13, ماشین: 11 |
+| :----------------------------------: | :----------------------------------: | :----------------------------------: |
+|              ![image]()              |              ![image]()              |            ![image]()                |
+
 ### Analogy: 
 ```python
 demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
