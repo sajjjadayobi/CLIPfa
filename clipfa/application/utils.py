@@ -16,7 +16,7 @@ class VisionDataset(Dataset):
         self.image_paths = image_paths
 
     def __getitem__(self, idx):
-        return self.preprocess(Image.open(self.image_paths[idx]))
+        return self.preprocess(Image.open(self.image_paths[idx]).convert('RGB'))
 
     def __len__(self):
         return len(self.image_paths)
