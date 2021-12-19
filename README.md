@@ -36,7 +36,7 @@ The followings are just some use cases of CLIP model.
 from clipfa import CLIPDemo
 demo = CLIPDemo(vision_encoder, text_encoder, tokenizer)
 search.compute_text_embeddings(['سیب','موز' ,'آلبالو'])
-search.compute_image_embeddings(train_df.image.to_list())
+search.compute_image_embeddings(test_df.image_path.to_list())
 ```
 ### Image Search:
 ```python
@@ -65,14 +65,13 @@ demo.zero_shot(image_path='apples.jpg')
 
 ### Analogy: 
 ```python
-demo.anology('sunset.jpg', image_paths=image_paths, additional_text='دریا')
+demo.anology('sunset.jpg', additional_text='دریا')
 ```
 
 ### Online Demo: Huggingface 🤗 spaces
 
 ## Dataset: 300K
-Flicker30K (25K), MS-COCO (100K!), WiT (125K!), Unsplash (20!), Divar (100K!)
-
+250K from filtered (Flicker30K, MS-COCO, WiT, Unsplash)
 - Note: We used [image2ds](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as WiT. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
 
 
