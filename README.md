@@ -75,7 +75,7 @@ demo.zero_shot(image_path='apples.jpg')
 ### Online Demo: Huggingface 🤗 spaces
 
 ## Dataset: 300K
-I was crouse about how much of CLIP power comes from training on a huge dataset.
+I was crouse about how much of CLIP's power comes from training on a huge dataset.
 250K from filtered (Flicker30K, MS-COCO, WiT)
 - Note: We used [image2ds](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as WiT. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
 
