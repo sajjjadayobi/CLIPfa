@@ -1,9 +1,6 @@
 <span align="center">
-    <a href="https://huggingface.co/spaces/SajjadAyoubi/Image-Search-Fa"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Image Search Demo&color=blue"></a>
-</span>
-<span align="center">
+        <a href="https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=HF Demo&color=blue"></a>
     <a href="https://huggingface.co/SajjadAyoubi/"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Models&color=red"></a>
-    <a href="https://colab.research.google.com/github/sajjjadayobi/PersianQA/blob/main/notebooks/Demo.ipynb"><img src="https://img.shields.io/static/v1?label=Colab&message=Demo&logo=Google%20Colab&color=f9ab00"></a>
 </span>
 
 # CLIPfa: Connecting Farsi Text and Images
@@ -72,9 +69,10 @@ demo.zero_shot(image_path='apples.jpg')
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/horse.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cow.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/fish.jpg) |
 
-### Online Demo: [CLIPfa](https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo) at Huggingface 🤗 spaces
-
+### Online Demo: [CLIPfa at Huggingface🤗 spaces](https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo)
+We used a small set of images to keep this app almost real-time, but it's obvious that the quality of image search depends heavily on the size of the image database. 
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/hf-spaces.png)
+
 
 ## Dataset: 
 I was crouse about how much of CLIP's power comes from training on a huge dataset.
