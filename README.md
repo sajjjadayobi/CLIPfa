@@ -45,9 +45,9 @@ demo.image_search(query='غروب خورشید')
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/image_search.png)
 
 ```python
-demo.image_search(query='موج سواری')
+demo.image_search(query='جنگل در زمستان برفی')
 ```
-![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/wave.png)
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/forest%20in%20winter.png)
 
 ### Analogy: 
 ```python
