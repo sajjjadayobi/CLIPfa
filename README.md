@@ -71,6 +71,7 @@ demo.zero_shot(image_path='apples.jpg')
 
 ### Online Demo: [CLIPfa at Huggingface🤗 spaces](https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo)
 We used a small set of images to keep this app almost real-time, but it's obvious that the quality of image search depends heavily on the size of the image database. 
+
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/hf-spaces.png)
 
 
