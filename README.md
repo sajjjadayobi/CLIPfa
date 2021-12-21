@@ -72,7 +72,9 @@ demo.zero_shot(image_path='apples.jpg')
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/horse.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cow.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/fish.jpg) |
 
-### Online Demo: Huggingface 🤗 spaces
+### Online Demo: [CLIPfa](https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo) at Huggingface 🤗 spaces
+
+![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/hf-spaces.png)
 
 ## Dataset: 
 I was crouse about how much of CLIP's power comes from training on a huge dataset.
