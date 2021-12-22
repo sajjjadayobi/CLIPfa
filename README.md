@@ -83,7 +83,7 @@ I was crouse about how much of CLIP's power comes from training on a huge datase
 
 
 ## Training: <a href="https://colab.research.google.com/github/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
-Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [`this`](https://github.com/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb) notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated [flickr30K](https://www.kaggle.com/sajjadayobi360/flickrfa) dataset.
+Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [`this`](https://github.com/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb) notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated [‍`flickr30K`](https://www.kaggle.com/sajjadayobi360/flickrfa) dataset.
 
 
 ## Citation: ↩️
