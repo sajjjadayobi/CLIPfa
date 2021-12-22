@@ -47,7 +47,7 @@ if __name__ == '__main__':
     test_ds = CLIPDataset(image_paths=test_df.image.tolist(),
                           text=test_df.caption.tolist(), mode='test')
 
-    train_dl = DataLoader(train_ds, batch_size=BATCH_SIZE,
+    train_dl = DataLoader(train_ds, batch_size=2,
                           collate_fn=default_data_collator)
     for item in train_dl:
         print(item['input_ids'].shape)
