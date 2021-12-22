@@ -9,7 +9,7 @@ OpenAI released [`the paper Learning Transferable Visual Models From Natural Lan
 ![CLIPfa image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
 
 It should be noted that only 400K pairs were used for this training, whereas 4 million pairs were used for the Original CLIP. Also, the training took 30 days across 592 GPUs powered by the V100 chip.
-
+ 
 
 ## How to use?
 Both models generate vectors with 768 dimensions.
