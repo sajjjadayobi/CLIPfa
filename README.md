@@ -70,7 +70,7 @@ demo.zero_shot(image_path='apples.jpg')
 | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/horse.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cow.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/fish.jpg) |
 
 ### Online Demo: [CLIPfa at Huggingface🤗 spaces](https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo)
-We used a small set of images to keep this app almost real-time, but it's obvious that the quality of image search depends heavily on the size of the image database. 
+We used a small set of images (25K) to keep this app almost real-time, but it's obvious that the quality of image search depends heavily on the size of the image database. 
 
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/hf-spaces.png)
 
@@ -78,11 +78,11 @@ We used a small set of images to keep this app almost real-time, but it's obviou
 ## Dataset: 
 I was crouse about how much of CLIP's power comes from training on a huge dataset.
 400K from filtered and translated (Flicker30K, MS-COCO and CCm3)
-- Note: We used [image2ds](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as WiT. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
+- Note: We used [image2ds](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as MS-COCO. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
 
 
 ## Training: <a href="https://colab.research.google.com/github/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
-Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [`this`](https://github.com/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb) notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated flicker30k dataset.
+Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [`this`](https://github.com/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb) notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated [flicker30k] dataset.
 
 
 ## Citation: ↩️
