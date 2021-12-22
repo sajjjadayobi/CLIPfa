@@ -4,9 +4,9 @@
 </span>
 
 # CLIPfa: Connecting Farsi Text and Images
-OpenAI recently released [the paper Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. In this work we've trained a **Tiny Farsi(Persian)** version of [OpenAI's CLIP](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used RoBerta-fa for text encoder and Original CLIP's ViT as vision encoder.
+OpenAI recently released [`the paper Learning Transferable Visual Models From Natural Language Supervision`](https://arxiv.org/abs/2103.00020) in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. In this work we've trained a **Tiny Farsi(Persian)** version of [`OpenAI's CLIP`](https://openai.com/blog/clip/) on a crawled dataset with 300,000 (image, text) pairs. We used [`Farahani's RoBERTa-fa`](https://huggingface.co/m3hrdadfi/roberta-zwnj-wnli-mean-tokens) for text encoder and Original [`CLIP's ViT`](https://huggingface.co/openai/clip-vit-base-patch32) as vision encoder.
 ![CLIPfa image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
-Keep it in mind that, this model was trained for 5 epochs only on 300K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
+Keep it in mind that, this model was trained only on 400K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
 
 ## How to use?
 You can use these models of the shelf. Both models create vectors with 768 dimention.
@@ -90,9 +90,9 @@ If you have a technical question regarding the model, code or publication, creat
 we didn't publish any papers on the work. However, if you did, please cite us properly with an entry like one below.
 ```bibtex
 @misc{ParsBigBird,
-  author          = {Ayoubi, Sajjad},
+  author          = {Sajjad Ayoubi},
   title           = {CLIPfa: Connecting Farsi Text and Images},
-  year            = 2022,
+  year            = 2021,
   publisher       = {GitHub},
   journal         = {GitHub repository},
   howpublished    = {\url{https://github.com/SajjjadAyobi/CLIPfa}},
