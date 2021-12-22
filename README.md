@@ -92,7 +92,7 @@ If you have a technical question regarding the model, code or publication, creat
 we didn't publish any papers on the work. However, if you did, please cite us properly with an entry like one below.
 ```bibtex
 @misc{ParsBigBird,
-  author          = {Sajjad Ayoubi},
+  author          = {Sajjad Ayoubi, Navid Kanaani},
   title           = {CLIPfa: Connecting Farsi Text and Images},
   year            = 2021,
   publisher       = {GitHub},
