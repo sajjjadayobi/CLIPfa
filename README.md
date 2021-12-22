@@ -4,12 +4,15 @@
 </span>
 
 # CLIPfa: Connecting Farsi Text and Images
-OpenAI recently released [`the paper Learning Transferable Visual Models From Natural Language Supervision`](https://arxiv.org/abs/2103.00020) in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. In this work we've trained a **Tiny Farsi(Persian)** version of [`OpenAI's CLIP`](https://openai.com/blog/clip/) on a crawled dataset with 400,000 (image, text) pairs. We used [`Farahani's RoBERTa-fa`](https://huggingface.co/m3hrdadfi/roberta-zwnj-wnli-mean-tokens) for text encoder and Original [`CLIP's ViT`](https://huggingface.co/openai/clip-vit-base-patch32) as vision encoder and finetuned them.
+OpenAI released [`the paper Learning Transferable Visual Models From Natural Language Supervision`](https://arxiv.org/abs/2103.00020) in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective. CLIP consists of two separate models, a vision encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. We have trained a Farsi (Persian) version of OpenAI's CLIP on a dataset of 400,000 (image, text) pairs. We used [`Farahani's RoBERTa-fa`](https://huggingface.co/m3hrdadfi/roberta-zwnj-wnli-mean-tokens) as the text encoder and [‍‍`ViT‍`](https://huggingface.co/openai/clip-vit-base-patch32) as the vision encoder from Original CLIP and finetuned them.
+
 ![CLIPfa image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/clipfa.png)
-Keep it in mind that, this model was trained only on 400K pairs whereas the Original CLIP was traind on 4m pairs and The training process took 30 days across 592 V100 GPUs.
+
+It should be noted that only 400K pairs were used for this training, whereas 4 million pairs were used for the Original CLIP. Also, the training took 30 days across 592 GPUs powered by the V100 chip.
+
 
 ## How to use?
-You can use these models of the shelf. Both models create vectors with 768 dimention.
+Both models generate vectors with 768 dimensions.
 ```python
 from transformers import CLIPVisionModel, RobertaModel, AutoTokenizer, CLIPFeatureExtractor
 # download pre-trained models
@@ -18,8 +21,8 @@ preprocessor = CLIPFeatureExtractor.from_pretrained('SajjadAyoubi/clip-fa-vision
 text_encoder = RobertaModel.from_pretrained('SajjadAyoubi/clip-fa-text')
 tokenizer = AutoTokenizer.from_pretrained('SajjadAyoubi/clip-fa-text')
 # define input image and input text
-text = 'whatever you want'
-image = PIL.Image.open(image_path)
+text = 'something'
+image = PIL.Image.open('my_favorite_image.jpg')
 # compute embeddings
 text_embedding = text_encoder(**tokenizer(text, return_tensors='pt')).pooler_output
 image_embedding = vision_encoder(**preprocessor(image, return_tensors='pt')).pooler_output
@@ -57,8 +60,6 @@ demo.anology('sunset.jpg', additional_text='برف')
 ```
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/analogy-snow.png)
 
-
-
 ### Zero Shot Image Classification:
 ```python
 demo.zero_shot(image_path='apples.jpg')
@@ -69,7 +70,7 @@ demo.zero_shot(image_path='apples.jpg')
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/horse.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/cow.jpg) | ![image](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/fish.jpg) |
 
-### Online Demo: [CLIPfa at Huggingface🤗 spaces](https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo)
+## Online Demo: [CLIPfa at Huggingface🤗 spaces](https://huggingface.co/spaces/SajjadAyoubi/CLIPfa-Demo)
 We used a small set of images (25K) to keep this app almost real-time, but it's obvious that the quality of image search depends heavily on the size of the image database. 
 
 ![](https://github.com/sajjjadayobi/CLIPfa/blob/main/assets/hf-spaces.png)
@@ -82,7 +83,7 @@ I was crouse about how much of CLIP's power comes from training on a huge datase
 
 
 ## Training: <a href="https://colab.research.google.com/github/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
-Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [`this`](https://github.com/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb) notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated [flicker30k] dataset.
+Any dataset can be used with little change by the [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa). CLIPfa can be trained with other encoders as long as they have the same hidden size at the last layer.  In [`this`](https://github.com/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb) notebook I used [`training code`](https://github.com/sajjjadayobi/CLIPfa/tree/main/clipfa) to train a small CLIP on translated [flickr30K](https://www.kaggle.com/sajjadayobi360/flickrfa) dataset.
 
 
 ## Citation: ↩️
