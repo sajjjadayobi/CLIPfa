@@ -27,7 +27,7 @@ text_embedding.shape == image_embedding.shape
 ```
 
 ## Demo:
-The followings are just some use cases of CLIPfa on 25K [unsplash images](https://github.com/unsplash/datasets)
+The followings are just some use cases of CLIPfa on 25K [`Unsplash images`](https://github.com/unsplash/datasets)
 - use `pip install -q git+https://github.com/sajjjadayobi/clipfa.git`
 ```python
 from clipfa import CLIPDemo
@@ -78,7 +78,7 @@ We used a small set of images (25K) to keep this app almost real-time, but it's 
 ## Dataset: 
 I was crouse about how much of CLIP's power comes from training on a huge dataset.
 400K from filtered and translated (Flicker30K, MS-COCO and CCm3)
-- Note: We used [image2ds](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as MS-COCO. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
+- Note: We used [`image2ds`](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as MS-COCO. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
 
 
 ## Training: <a href="https://colab.research.google.com/github/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
