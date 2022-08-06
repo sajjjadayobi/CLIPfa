@@ -91,7 +91,7 @@ Any dataset can be used with little change by the [`training code`](https://gith
 If you have a technical question regarding the model, code or publication, create an issue in the repository.
 we didn't publish any papers on the work. However, if you did, please cite us properly with an entry like one below.
 ```bibtex
-@misc{ParsBigBird,
+@misc{CLIPfa,
   author          = {Sajjad Ayoubi, Navid Kanaani},
   title           = {CLIPfa: Connecting Farsi Text and Images},
   year            = 2021,
