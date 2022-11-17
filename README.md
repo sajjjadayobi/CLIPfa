@@ -77,15 +77,12 @@ We used a small set of images (25K) to keep this app almost real-time, but it's 
 
 
 ## Dataset:
-### Dataset1 (400K)
+### Training v1 (400K)
 We started with this question that how much the original Clip model depends on its big training dataset containing a lot of conceptual samples. Our model shows that It is possible to meet an acceptable enough target with only a little amount of data even though, It may not have known enough concepts and subjects to be used widely. Our model trained on a dataset gathered from different resources such as The Flickr30k, MS-COCO 2017, Google CCm3, ... . We used these datasets and translated them into the Persian language with a [`tool`](https://github.com/sajjjadayobi/CLIPfa/blob/main/clipfa/data/translation.py) prepared by ourselves. Using the Google Translate and Multilingual Similarity Check method we provided an automatic translator that has been given a list of English captions and filtered by the best translations.
 
-- Note: We used [`image2ds`](https://github.com/rom1504/img2dataset) a great tool to download large scale image datasets such as MS-COCO. It can download, resize and package 100M urls in 20h on one machine. Also supports saving captions for url+caption datasets.
-- [`coco-flickr-fa 130K on Kaggle`](https://www.kaggle.com/navidkanaani/coco-flickr-farsi)
-
-### Dataset2 (20M)
-
-In the second step, we used [`LAION-2B-multi`](https://huggingface.co/datasets/laion/laion2B-multi) Persian(Farsi) subset. This dataset contains ~20 million image-text pairs of the LAION-2B-multi in the Persian language. We call this dataset [`LAION-20M-fa`](https://huggingface.co/datasets/amir7d0/laion20M-fa). We used [`image2dataset`](https://github.com/rom1504/img2dataset) to download LAION-20M-fa dataset images. Then we calculated the similarity of the embeddings for the image and the text with CLIP-fa. After the similarity score was established we removed the pairs under the threshold we decided to use, i.e 0.50 for the Persian dataset. Then we used LAION-20M-fa to fine-tune CLIP-fa.
+### Available v2 (20M)
+We started with the Persian(Farsi) subset of the [`LAION-2B-multi`](https://huggingface.co/datasets/laion/laion2B-multi) dataset and released a cleaned version called [`LAION-20M-fa`](https://huggingface.co/datasets/amir7d0/laion20M-fa). We used [`image2dataset`](https://github.com/rom1504/img2dataset)  to download LAION-20M-fa dataset images. Then we calculated the similarity of the image and text embeddings with CLIP-fa. After the similarity score was established we removed the pairs under the threshold we decided to use, i.e 0.50 for the Persian dataset. Then we used a small portion of LAION-20M-fa to fine-tune CLIP-fa v2 because of computation restrictions.
+- It'd be appreciated if someone with access to some GPUs could train the model on the whole dataset and share it with the community.
 
 
 ## Training: <a href="https://colab.research.google.com/github/sajjjadayobi/CLIPfa/blob/main/notebook/CLIPfa_Training.ipynb"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=CLIPfa Training&color=white"></a>
