@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
    
 setuptools.setup(
     name='clipfa',
-    version='0.1',
+    version='0.1.5',
     author="Sajjad Ayoubi",
     author_email="sadeveloper360@gmail.com",
     description="Persian version of Openai's CLIP",
