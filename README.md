@@ -96,7 +96,7 @@ we didn't publish any papers on the work. However, if you did, please cite us pr
 @misc{CLIPfa,
   author          = {Sajjad Ayoubi, Navid Kanaani, Amir Ahmadi},
   title           = {CLIPfa: Connecting Farsi Text and Images},
-  year            = 2021,
+  year            = 2022,
   publisher       = {GitHub},
   journal         = {GitHub repository},
   howpublished    = {\url{https://github.com/SajjjadAyobi/CLIPfa}},
